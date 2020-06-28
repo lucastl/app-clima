@@ -19,3 +19,12 @@
 .header-wrap nav a:last-child {
     margin-right: 0;
 }
+
+@media only screen and (min-device-width : 1px) and (max-device-width : 1024px) {
+
+    .header-wrap {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+}

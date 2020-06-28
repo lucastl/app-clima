@@ -6,3 +6,12 @@
     transform: scale(1.5);
     cursor: pointer;
 }
+
+@media only screen and (min-device-width : 1px) and (max-device-width : 1024px) {
+
+    .favorite-button {
+        margin: 0 .5rem;
+        transform: scale(1);
+    }
+
+}

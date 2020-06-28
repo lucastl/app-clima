@@ -9,3 +9,11 @@
     border-radius: .2rem;
     margin: 2rem auto 0;
 }
+
+@media only screen and (min-device-width : 1px) and (max-device-width : 1024px) {
+
+    .no-favorites {
+        width: 90%;
+    }
+
+}
