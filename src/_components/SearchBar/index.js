@@ -5,7 +5,6 @@ import { Autocomplete } from '@material-ui/lab';
 import cities from '../../_configs/city.list.min.json';
 
 import './style.css';
-import { Redirect } from 'react-router-dom';
 
 const citiesList = cities.filter(city => city.country === 'AR');
 
@@ -14,7 +13,7 @@ const SearchBar = ({ search, setSearch, setConsult, setError }) => {
     const handleSubmit = e => {
         e.preventDefault();
 
-        if(search === null) {
+        if (search === null) {
             setError(true);
             return;
         }

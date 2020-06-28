@@ -54,7 +54,6 @@ function App(props) {
   useEffect(() => {
     const { pathname, search } = window.location;
 
-    console.log(window)
     const searchFormat = search.slice(1).split(',');
 
     if (pathname === '/compartir') {

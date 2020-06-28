@@ -1,8 +1,8 @@
 .no-search {
-    background: rgba(0,0,0,.05);
+    background: rgba(0,0,0,.1);
     width: 30rem;
     text-align: center;
-    color: rgba(0,0,0,.3);
+    color: rgba(0,0,0,.5);
     padding: 1rem;
     box-sizing: border-box;
     border: 1px solid rgba(0,0,0,.1);
@@ -12,11 +12,11 @@
 
 aside.shared-buttons-wrap {
     padding: 1rem 0;
-    background: rgba(0,0,0,.05);
+    background: rgba(0,0,0,.1);
     width: 50rem;
     margin: 0 auto;
     border-radius: .25rem;
-    border: 1px solid rgba(0,0,0,.05);
+    border: 1px solid rgba(0,0,0,.08);
     display: flex;
     justify-content: space-evenly;
 }
@@ -29,6 +29,7 @@ aside.shared-buttons-wrap {
 
     aside.shared-buttons-wrap {
         width: 90%;
+        margin-bottom: 2rem;
     }
 
 }

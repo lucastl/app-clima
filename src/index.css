@@ -10,6 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--main-color-bg);
 }
 
 code {
@@ -19,6 +20,7 @@ code {
 
 :root {
   --main-color: rgba(51, 139, 180, .8);
+  --main-color-bg: rgba(51, 139, 180, .2);
   --link-color: rgba(255,255,255, .8);
   --link-color-hover: rgba(255,255,255, 1);
 }
