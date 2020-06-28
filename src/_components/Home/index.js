@@ -1,11 +1,15 @@
 import React from 'react'
+import ResultsList from '../../_components/ResultsList';
 
-const Home = (props) => {
-
-    const { title } = props;
+const Home = ({ title, result }) => {
 
     return (
-        <h1>{title}</h1>
+        <>
+            <h1>{title}</h1>
+            <ResultsList
+                result={result}
+            />
+        </>
     );
 }
 

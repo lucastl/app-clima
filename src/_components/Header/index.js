@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 import './style.css';
 
-const Header = (props) => {
-    const { title } = props;
+const Header = ({ title, search, setSearch, setConsult, setError }) => {
+
     return (
         <Box
             component="header"
@@ -30,7 +30,12 @@ const Header = (props) => {
                     Favoritos
                 </Link>
             </nav>
-            <SearchBar />
+            <SearchBar
+                setSearch={setSearch}
+                search={search}
+                setConsult={setConsult}
+                setError={setError}
+            />
         </Box>
     );
 }

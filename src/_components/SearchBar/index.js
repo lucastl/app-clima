@@ -8,26 +8,43 @@ import './style.css';
 
 const citiesList = cities.filter(city => city.country === 'AR');
 
-const SearchBar = () => {
-    // eslint-disable-next-line
-    const [city, setCity] = useState(null);
+const SearchBar = ({ search, setSearch, setConsult, setError }) => {
+
+    const handleSubmit = e => {
+        e.preventDefault();
+
+        if(search === null) {
+            setError(true);
+            return;
+        }
+
+        setError(false);
+
+        setConsult(true);
+    }
 
     return (
         <Box
             className="search-bar-wrap"
+            component='form'
+            onSubmit={handleSubmit}
         >
             <Autocomplete
                 multiple
-                id="city"
+                id="search"
                 limitTags={3}
                 options={citiesList}
                 getOptionLabel={(option) => option.name}
                 onChange={(e, targetValue) => {
-                    setCity(targetValue);
+                    setSearch(targetValue.map(city => city.id));
                 }}
                 renderInput={(params) => <TextField {...params} label="Ciudad/es" variant="outlined" />}
             />
-            <Button variant="contained" color="default">
+            <Button
+                variant="contained"
+                color="default"
+                type="submit"
+            >
                 <SearchIcon />
             </Button>
         </Box>
