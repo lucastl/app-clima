@@ -1,14 +1,24 @@
 import React from 'react'
 import ResultsList from '../../_components/ResultsList';
+import { Box } from '@material-ui/core';
+import './style.css';
 
-const Home = ({ title, result }) => {
-
+const Home = ({ result }) => {
     return (
         <>
-            <h1>{title}</h1>
-            <ResultsList
-                result={result}
-            />
+            {
+                Object.entries(result).length ?
+                    <ResultsList
+                        title={'Resultados'}
+                        result={result}
+                    />
+                    : 
+                    <p
+                        className="no-search"
+                    >
+                        Realiza una consulta para obtener resultados...
+                    </p>
+            }
         </>
     );
 }

@@ -1,5 +1,5 @@
 .error-message {
-    background: rgb(231, 83, 83);
+    background: rgb(231, 83, 83, .5);
     width: 20rem;
     text-align: center;
     color: var(--link-color);

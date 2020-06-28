@@ -32,7 +32,7 @@ const SearchBar = ({ search, setSearch, setConsult, setError }) => {
             <Autocomplete
                 multiple
                 id="search"
-                limitTags={3}
+                limitTags={2}
                 options={citiesList}
                 getOptionLabel={(option) => option.name}
                 onChange={(e, targetValue) => {

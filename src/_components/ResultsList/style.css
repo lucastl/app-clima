@@ -1,0 +1,18 @@
+.results-list-container {
+    padding: 2rem 4rem;
+}
+
+.results-list-container h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8em;
+    color: rgba(0,0,0,.6);
+    font-weight: 300;
+    margin: 1rem 0 2rem;
+}
+
+.results-list-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

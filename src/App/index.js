@@ -47,9 +47,9 @@ function App() {
 
   let component;
   if (error) {
-    component = <Error mensaje="No hay resultados" />
+    component = <Error mensaje="No se ha ingresado ningúna ciudad" />
   } else {
-    component = <Home title={'Inicio'} result={result} />
+    component = <Home result={result} />
   }
 
   return (
