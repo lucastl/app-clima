@@ -11,7 +11,7 @@ import Favorites from '../_components/Favorites';
 import Header from '../_components/Header';
 import Error from '../_components/Error';
 
-function App() {
+function App(props) {
 
   const [search, setSearch] = useState(null);
   const [result, setResult] = useState({});
@@ -51,11 +51,44 @@ function App() {
     // eslint-disable-next-line
   }, [consult]);
 
+  useEffect(() => {
+    const { pathname, search } = window.location;
+
+    console.log(window)
+    const searchFormat = search.slice(1).split(',');
+
+    if (pathname === '/compartir') {
+
+      const consultShared = async (idCities) => {
+
+        const url = `${GLOBAL.API_URL}${idCities.join()}&units=metric&appid=${GLOBAL.API_KEY}`;
+
+        const response = await fetch(url);
+        const result = await response.json();
+
+        setResult(result);
+        setSearch(searchFormat);
+
+        // Detecta si hubo resultados correctos en la consulta
+
+        if (result.cod === "404") {
+          setError(true);
+        } else {
+          setError(false);
+        }
+
+      }
+      consultShared(searchFormat);
+
+    }
+
+  }, []);
+
   let component;
   if (error) {
     component = <Error mensaje="No se ha ingresado ningúna ciudad" />
   } else {
-    component = <Home result={result} favorites={favorites} setFavorites={setFavorites} />
+    component = <Home result={result} favorites={favorites} setFavorites={setFavorites} search={search} />
   }
 
   return (
@@ -69,6 +102,7 @@ function App() {
       />
       <Switch>
         <Route exact path="/favoritos" render={() => <Favorites title={'Favoritos'} favorites={favorites} setFavorites={setFavorites} />} />
+        <Route path={`/compartir`} render={() => component} />
         <Route exact path="/" render={() => component} />
       </Switch>
     </BrowserRouter>
