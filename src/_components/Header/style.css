@@ -1,0 +1,21 @@
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--main-color);
+    padding: 1rem 4rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,.3);
+}
+
+.header-wrap nav {
+    display: flex;
+    justify-content: center;
+}
+
+.header-wrap nav a {
+    margin-right: 1rem;
+}
+
+.header-wrap nav a:last-child {
+    margin-right: 0;
+}

@@ -1,0 +1,17 @@
+.search-bar-wrap {
+    display: flex;
+    width: 40rem;
+}
+
+.MuiAutocomplete-root,
+.MuiFormControl-fullWidth {
+    width: 100%;
+}
+
+.MuiAutocomplete-root {
+    margin-right: 1rem;
+}
+
+.MuiOutlinedInput-root {
+    background: rgba(255,255,255,.6);
+}
