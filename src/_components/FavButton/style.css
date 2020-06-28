@@ -1,0 +1,8 @@
+.favorite-button {
+    -webkit-appearance: inherit;
+    background: transparent;
+    border: none;
+    margin: 1rem 2rem 0;
+    transform: scale(1.5);
+    cursor: pointer;
+}

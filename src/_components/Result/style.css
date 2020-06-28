@@ -1,11 +1,11 @@
 .result-wrap {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     width: 40rem;
 }
 
 .MuiCardContent-root {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .primary-info {

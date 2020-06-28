@@ -17,12 +17,18 @@ function App() {
   const [result, setResult] = useState({});
   const [consult, setConsult] = useState(false);
   const [error, setError] = useState(false);
+  const [favorites, setFavorites] = useState(
+    JSON.parse(localStorage.getItem('favorites')) || []
+  );
+
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [favorites]);
 
   useEffect(() => {
     const consultAPI = async () => {
 
       if (consult) {
-        console.log(search);
         const url = `${GLOBAL.API_URL}${search.join()}&units=metric&appid=${GLOBAL.API_KEY}`;
 
         const response = await fetch(url);
@@ -49,7 +55,7 @@ function App() {
   if (error) {
     component = <Error mensaje="No se ha ingresado ningúna ciudad" />
   } else {
-    component = <Home result={result} />
+    component = <Home result={result} favorites={favorites} setFavorites={setFavorites} />
   }
 
   return (

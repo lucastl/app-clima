@@ -3,7 +3,7 @@ import ResultsList from '../../_components/ResultsList';
 import { Box } from '@material-ui/core';
 import './style.css';
 
-const Home = ({ result }) => {
+const Home = ({ result, favorites, setFavorites }) => {
     return (
         <>
             {
@@ -11,6 +11,8 @@ const Home = ({ result }) => {
                     <ResultsList
                         title={'Resultados'}
                         result={result}
+                        favorites={favorites}
+                        setFavorites={setFavorites}
                     />
                     : 
                     <p
