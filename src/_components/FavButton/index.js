@@ -4,23 +4,21 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 
 import './style.css';
 
-var favs = JSON.parse(localStorage.getItem('favorites')) || [];
-
 const FavButton = ({ idCity, setFavorites, favorites }) => {
 
+    const check = favorites.filter(id => id === idCity);
 
     const toggleFavorite = () => {
-        const check = favorites.filter(id => id === idCity);
 
         if (!check.length) {
             console.log('if');
             // no esta en favoritos
-            setFavorites([...favorites, idCity]);       
+            setFavorites([...favorites, idCity]);
         } else {
             console.log('else');
             // esta en favoritos
             let deleteFav = favorites.filter(id => id !== idCity);
-            setFavorites(deleteFav);           
+            setFavorites(deleteFav);
         }
 
     }
@@ -30,7 +28,12 @@ const FavButton = ({ idCity, setFavorites, favorites }) => {
             className="favorite-button"
             onClick={toggleFavorite}
         >
-            <FavoriteBorderIcon />
+            {
+                !check.length ?
+                    <FavoriteBorderIcon />
+                    :
+                    <FavoriteIcon />
+            }
         </button>
     );
 }

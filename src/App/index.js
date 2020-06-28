@@ -26,10 +26,10 @@ function App() {
   }, [favorites]);
 
   useEffect(() => {
-    const consultAPI = async () => {
+    const consultAPI = async (idCities) => {
 
       if (consult) {
-        const url = `${GLOBAL.API_URL}${search.join()}&units=metric&appid=${GLOBAL.API_KEY}`;
+        const url = `${GLOBAL.API_URL}${idCities.join()}&units=metric&appid=${GLOBAL.API_KEY}`;
 
         const response = await fetch(url);
         const result = await response.json();
@@ -47,7 +47,7 @@ function App() {
       }
 
     }
-    consultAPI();
+    consultAPI(search);
     // eslint-disable-next-line
   }, [consult]);
 
@@ -68,7 +68,7 @@ function App() {
         setError={setError}
       />
       <Switch>
-        <Route exact path="/favoritos" render={() => <Favorites title={'Favoritos'} />} />
+        <Route exact path="/favoritos" render={() => <Favorites title={'Favoritos'} favorites={favorites} setFavorites={setFavorites} />} />
         <Route exact path="/" render={() => component} />
       </Switch>
     </BrowserRouter>
