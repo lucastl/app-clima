@@ -24,7 +24,7 @@ const Favorites = ({ title, favorites, setFavorites }) => {
 
         }
         consultFavs(favorites);
-    }, [result]);
+    }, [favorites]);
 
     return (
         Object.entries(result).length ?
