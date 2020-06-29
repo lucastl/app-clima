@@ -101,7 +101,7 @@ function App(props) {
       />
       <Switch>
         <Route exact path="/favoritos" render={() => <Favorites title={'Favoritos'} favorites={favorites} setFavorites={setFavorites} />} />
-        <Route path={`/compartir`} render={() => component} />
+        <Route path="/compartir" render={() => component} />
         <Route exact path="/" render={() => component} />
       </Switch>
     </BrowserRouter>
