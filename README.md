@@ -14,7 +14,7 @@ Iniciar aplicación:
 
 Demo:
 
-### `https://unruffled-banach-231896.netlify.app/`
+### `https://clipa-app-l.netlify.app/`
 
 ### Próximas mejoras:
 
