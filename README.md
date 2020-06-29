@@ -11,3 +11,11 @@ Clonar el respositorio e instalar dependencias:
 Iniciar aplicación:
 
 ### `yarn start`
+
+### Próximas mejoras:
+
+- Extraer función para consultar API y reutilizar.
+- Reducir JSON de ciudades para que no pese tanto.
+- Redireccionar a la pantalla de resultados al buscar en caso de estar en favoritos.
+- Al desmarcar favoritos el último no desaparece de la pantalla. Hasta que se cambie manualmente.
+- Mejoras varias estéticas.
