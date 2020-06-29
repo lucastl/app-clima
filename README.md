@@ -12,6 +12,10 @@ Iniciar aplicación:
 
 ### `yarn start`
 
+Demo:
+
+### `https://unruffled-banach-231896.netlify.app/`
+
 ### Próximas mejoras:
 
 - Extraer función para consultar API y reutilizar.
@@ -19,4 +23,5 @@ Iniciar aplicación:
 - ~~Redireccionar a la pantalla de resultados al buscar en caso de estar en favoritos.~~
 - Al desmarcar favoritos el último no desaparece de la pantalla. Hasta que se cambie manualmente.
 - Pintar iconos segun el clima.
+- Progresive Web App
 - Mejoras varias estéticas.
