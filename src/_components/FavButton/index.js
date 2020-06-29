@@ -30,9 +30,15 @@ const FavButton = ({ idCity, setFavorites, favorites }) => {
         >
             {
                 !check.length ?
-                    <FavoriteBorderIcon />
+                    <>
+                        <FavoriteBorderIcon />
+                        <small>Añadir a favoritos</small>
+                    </>
                     :
-                    <FavoriteIcon />
+                    <>
+                        <FavoriteIcon />
+                        <small>Quitar de favoritos</small>
+                    </>
             }
         </button>
     );
