@@ -2,16 +2,21 @@ import React from 'react';
 import { Button, Box, TextField } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import { Autocomplete } from '@material-ui/lab';
+import { useHistory } from 'react-router-dom';
 import cities from '../../_configs/city.list.min.json';
 
 import './style.css';
 
-const citiesList = cities.filter(city => city.country === 'AR');
+const citiesList = cities;
 
 const SearchBar = ({ search, setSearch, setConsult, setError }) => {
 
+    const history = useHistory();
+
     const handleSubmit = e => {
         e.preventDefault();
+
+        history.push("/");
 
         if (search === null) {
             setError(true);
