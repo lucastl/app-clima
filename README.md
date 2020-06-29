@@ -14,7 +14,7 @@ Iniciar aplicación:
 
 Demo:
 
-### `https://clipa-app-l.netlify.app/`
+### `https://clima-app-l.netlify.app/`
 
 ### Próximas mejoras:
 
